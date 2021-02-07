@@ -8,6 +8,7 @@ import DayPicker, { DayModifiers } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 
 import logoImg from '../../assets/logo.svg';
+import userImg from '../../assets/user.png';
 import { useAuth } from '../../hooks/auth';
 import api from '../../services/api';
 
@@ -142,7 +143,7 @@ const Dashboard: React.FC = () => {
           <img src={logoImg} alt="GoBarber" />
 
           <Profile>
-            <img src={avatar_url} alt={name} />
+            <img src={avatar_url || userImg} alt={name} />
             <div>
               <span>Bem vindo</span>
               <Link to="/profile">
